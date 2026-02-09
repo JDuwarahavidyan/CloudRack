@@ -7,6 +7,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const location = useLocation()
   const isHomePage = location.pathname === '/'
+  const assetBase = import.meta.env.BASE_URL
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +53,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <img 
-              src="/assets/images/logo.png" 
+              src={`${assetBase}assets/images/logo.png`}
               alt="CloudRack Logo" 
               className="h-12 w-auto transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12"
               onError={(e) => {

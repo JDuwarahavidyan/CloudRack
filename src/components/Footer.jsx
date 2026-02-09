@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
+  const assetBase = import.meta.env.BASE_URL
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -19,7 +20,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img 
-                src="/assets/images/logo.png" 
+                src={`${assetBase}assets/images/logo.png`}
                 alt="CloudRack Logo" 
                 className="h-12 w-auto"
                 onError={(e) => {

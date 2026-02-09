@@ -7,23 +7,24 @@ const Partners = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   // First row - slides from right to left
+  const assetBase = import.meta.env.BASE_URL
   const partnersRow1 = [
-    { name: 'AWS', logo: '/assets/clients/Amazon_Web_Services_Logo.svg' },
-    { name: 'Microsoft', logo: '/assets/clients/ms3.png' },
-    { name: 'Google Cloud', logo: '/assets/clients/gcp.png' },
-    { name: 'Oracle', logo: '/assets/clients/oracle.png' },
-    { name: 'Adobe', logo: '/assets/clients/adobe.png' },
-    { name: 'SAP', logo: '/assets/clients/sap.png' },
+    { name: 'AWS', logo: `${assetBase}assets/clients/Amazon_Web_Services_Logo.svg` },
+    { name: 'Microsoft', logo: `${assetBase}assets/clients/ms3.png` },
+    { name: 'Google Cloud', logo: `${assetBase}assets/clients/gcp.png` },
+    { name: 'Oracle', logo: `${assetBase}assets/clients/oracle.png` },
+    { name: 'Adobe', logo: `${assetBase}assets/clients/adobe.png` },
+    { name: 'SAP', logo: `${assetBase}assets/clients/sap.png` },
   ]
 
   // Second row - slides from right to left
   const partnersRow2 = [
-    { name: 'Lenovo', logo: '/assets/clients/lenova.png' },
-    { name: 'Dell', logo: '/assets/clients/dell.png' },
-    { name: 'HP', logo: '/assets/clients/hp.png' },
-    { name: 'Palo Alto Networks', logo: '/assets/clients/paloalto.png' },
-    { name: 'Fortinet', logo: '/assets/clients/fortinet.png' },
-    { name: 'Akamai', logo: '/assets/clients/akamai.png' },
+    { name: 'Lenovo', logo: `${assetBase}assets/clients/lenova.png` },
+    { name: 'Dell', logo: `${assetBase}assets/clients/dell.png` },
+    { name: 'HP', logo: `${assetBase}assets/clients/hp.png` },
+    { name: 'Palo Alto Networks', logo: `${assetBase}assets/clients/paloalto.png` },
+    { name: 'Fortinet', logo: `${assetBase}assets/clients/fortinet.png` },
+    { name: 'Akamai', logo: `${assetBase}assets/clients/akamai.png` },
   ]
 
   const PartnerLogo = ({ partner }) => (
