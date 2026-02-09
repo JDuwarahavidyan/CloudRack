@@ -24,6 +24,16 @@
     <meta property="twitter:title" content="CloudRack | Enterprise Cloud Solutions & Managed Services" />
     <meta property="twitter:description" content="CloudRack delivers enterprise-grade cloud infrastructure, managed services, and digital transformation solutions." />
     <meta property="twitter:image" content="%BASE_URL%assets/images/logo.png" />
+
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search)
+        var redirect = params.get('redirect')
+        if (redirect) {
+          window.history.replaceState(null, '', redirect)
+        }
+      })()
+    </script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
