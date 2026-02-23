@@ -278,7 +278,7 @@ const Careers = () => {
         >
           <p className="text-gray-400 mb-4">Don&apos;t see a position that fits?</p>
           <Link
-            to="/careers/no-vacancy"
+            to="/no-vacancy"
             className="text-brand-400 hover:text-brand-300 transition-colors underline"
           >
             Check future opportunities

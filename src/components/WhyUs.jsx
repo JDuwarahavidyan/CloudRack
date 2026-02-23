@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 const WhyUs = () => {
@@ -51,6 +50,15 @@ const WhyUs = () => {
       ),
       title: "Secure Industry Cloud Platforms",
       description: "Purpose-built cloud solutions tailored for healthcare, finance, manufacturing, and retail. Industry-specific security controls, compliance frameworks, and optimized architectures for your sector."
+    },
+    {
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+        </svg>
+      ),
+      title: "IoT Development & Edge Computing",
+      description: "Connect, manage, and scale thousands of IoT devices with secure edge-to-cloud pipelines. From sensor data ingestion to real-time analytics and predictive maintenance, we build intelligent IoT ecosystems that drive operational efficiency."
     }
   ]
 

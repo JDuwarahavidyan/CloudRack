@@ -24,19 +24,8 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background */}
+      {/* Background */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute w-full h-full object-cover opacity-20"
-          poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%23000' width='1920' height='1080'/%3E%3C/svg%3E"
-        >
-          <source src="/assets/videos/cloud-bg.mp4" type="video/mp4" />
-        </video>
-        {/* Fallback Gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-900/90 via-gray-950/95 to-accent-900/90" />
         
         {/* Animated Shapes */}

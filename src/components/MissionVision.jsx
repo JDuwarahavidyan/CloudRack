@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 const MissionVision = () => {
@@ -47,7 +46,7 @@ const MissionVision = () => {
               <h3 className="text-3xl font-bold text-white">Our Mission</h3>
             </div>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              To empower enterprises with transformative cloud solutions that drive innovation, efficiency, and growth. 
+              To empower enterprises with transformative solutions that drive innovation, efficiency, and growth. 
               We are committed to delivering secure, scalable, and intelligent infrastructure that enables our clients 
               to focus on their core business while we handle the complexity of modern cloud operations.
             </p>
@@ -92,7 +91,7 @@ const MissionVision = () => {
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
               To be the global leader in cloud transformation, recognized for our innovation, expertise, and unwavering 
               commitment to client success. We envision a future where businesses of all sizes can harness the full 
-              power of cloud technology to achieve their most ambitious goals.
+              power of technology to achieve their most ambitious goals.
             </p>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">

@@ -21,10 +21,6 @@
     @apply bg-gradient-to-r from-brand-400 via-brand-500 to-accent-500 bg-clip-text text-transparent;
   }
 
-  .hover-scale {
-    @apply transition-transform duration-300 hover:scale-105;
-  }
-
   .section-padding {
     @apply py-20 px-6 md:px-12 lg:px-20;
   }

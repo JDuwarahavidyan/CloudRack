@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
   const isHomePage = location.pathname === '/'
   const assetBase = import.meta.env.BASE_URL
 
@@ -18,14 +19,20 @@ const Header = () => {
   }, [])
 
   const scrollToSection = (sectionId) => {
+    setIsMobileMenuOpen(false)
     if (!isHomePage) {
-      window.location.href = `/#${sectionId}`
+      navigate('/')
+      setTimeout(() => {
+        const element = document.getElementById(sectionId)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
       return
     }
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
-      setIsMobileMenuOpen(false)
     }
   }
 
@@ -34,7 +41,7 @@ const Header = () => {
     { label: 'Services', id: 'services' },
     { label: 'Products', id: 'projects' },
     { label: 'Partners', id: 'partners' },
-    { label: 'Careers', link: '/careers' },
+    { label: 'Careers', link: '/no-vacancy' },
     { label: 'Contact', id: 'contact' },
   ]
 
@@ -53,9 +60,9 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <img 
-              src={`${assetBase}assets/images/logo.png`}
+              src={`${assetBase}assets/images/logo2.png`}
               alt="CloudRack Logo" 
-              className="h-12 w-auto transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12"
+              className="h-12 w-auto brightness-125 drop-shadow-[0_0_8px_rgba(0,162,162,0.4)] transition-all duration-300 group-hover:scale-110 group-hover:rotate-12"
               onError={(e) => {
                 e.target.style.display = 'none'
                 e.target.nextSibling.style.display = 'block'

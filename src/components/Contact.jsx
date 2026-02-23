@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 
 const Contact = () => {
@@ -189,14 +188,14 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-white mb-1">Email</h4>
-                    <a href="mailto:contact@cloudrack.com" className="text-gray-400 hover:text-brand-400 transition-colors">
-                      contact@cloudrack.com
+                    <a href="mailto:info@cloudrack.co.in" className="text-gray-400 hover:text-brand-400 transition-colors">
+                      info@cloudrack.co.in
                     </a>
                   </div>
                 </div>
               </div>
 
-              <div className="glass-card p-6 hover:bg-white/10 transition-all duration-300 group">
+              {/* <div className="glass-card p-6 hover:bg-white/10 transition-all duration-300 group">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500/20 to-accent-500/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                     <svg className="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -205,12 +204,12 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-white mb-1">Phone</h4>
-                    <a href="tel:+12345678900" className="text-gray-400 hover:text-brand-400 transition-colors">
-                      +1 234 567 8900
+                    <a href="tel:+919876543210" className="text-gray-400 hover:text-brand-400 transition-colors">
+                      +91 98765 43210
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <div className="glass-card p-6 hover:bg-white/10 transition-all duration-300 group">
                 <div className="flex items-start space-x-4">
@@ -222,7 +221,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-white mb-1">Location</h4>
-                    <p className="text-gray-400">San Francisco, CA 94105</p>
+                    <p className="text-gray-400">Primus Building, Door No. SP – 7A,
+                          Guindy Industrial Estate, Guindy,
+                          Chennai</p>
                   </div>
                 </div>
               </div>

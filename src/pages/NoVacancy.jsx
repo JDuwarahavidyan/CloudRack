@@ -92,12 +92,7 @@ const NoVacancy = () => {
             >
               Back to Home
             </Link>
-            <Link
-              to="/careers"
-              className="px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-full text-white font-semibold hover:bg-white/10 transition-all duration-300 hover:scale-105 w-full sm:w-auto text-center"
-            >
-              View Open Positions
-            </Link>
+            
           </motion.div>
 
           {/* Contact Info */}
@@ -115,7 +110,7 @@ const NoVacancy = () => {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <span>careers@cloudrack.com</span>
+              <span>info@cloudrack.co.in</span>
             </a>
           </motion.div>
         </motion.div>

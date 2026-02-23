@@ -29,6 +29,7 @@ node_modules
 
 # Build files
 build/
+dist/
 .cache/
 
 # Testing

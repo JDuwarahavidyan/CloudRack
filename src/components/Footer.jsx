@@ -18,25 +18,26 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <img 
-                src={`${assetBase}assets/images/logo.png`}
-                alt="CloudRack Logo" 
-                className="h-12 w-auto"
-                onError={(e) => {
-                  e.target.style.display = 'none'
-                  e.target.nextSibling.style.display = 'block'
-                }}
-              />
-              <div className="h-10 w-10 bg-gradient-to-br from-brand-400 to-accent-500 rounded-lg flex items-center justify-center" style={{display: 'none'}}>
-                <span className="text-xl font-bold text-white">C</span>
+            <div>
+              <div className="flex items-center space-x-3">
+                <img
+                  src={`${assetBase}assets/images/logo2.png`}
+                  alt="CloudRack Logo"
+                  className="h-12 w-auto"
+                  onError={(e) => {
+                    e.target.style.display = 'none'
+                    e.target.nextSibling.style.display = 'block'
+                  }}
+                />
+                <div className="h-10 w-10 bg-gradient-to-br from-brand-400 to-accent-500 rounded-lg flex items-center justify-center" style={{display: 'none'}}>
+                  <span className="text-xl font-bold text-white">C</span>
+                </div>
+                <h3 className="text-xl font-bold gradient-text">CloudRack</h3>
               </div>
+              <p className="text-gray-400 text-sm leading-relaxed mt-4">
+                Empower progress through innovative technology.
+              </p>
             </div>
-            <h3 className="text-xl font-bold gradient-text">CloudRack</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Enterprise-grade cloud infrastructure and managed services. 
-              Empowering businesses with secure, scalable, and high-performance digital solutions.
-            </p>
             <div className="flex space-x-4">
               <a 
                 href="https://linkedin.com" 
@@ -95,15 +96,15 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('about')}
+                <button
+                  onClick={() => scrollToSection('why-us')}
                   className="text-gray-400 hover:text-brand-400 transition-colors duration-200 text-sm"
                 >
                   About Us
                 </button>
               </li>
               <li>
-                <Link to="/careers" className="text-gray-400 hover:text-brand-400 transition-colors duration-200 text-sm">
+                <Link to="/no-vacancy" className="text-gray-400 hover:text-brand-400 transition-colors duration-200 text-sm">
                   Careers
                 </Link>
               </li>
@@ -120,38 +121,42 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-white">Services</h4>
+            <h4 className="text-lg font-semibold mb-6 text-white">Locations</h4>
             <ul className="space-y-3">
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('services')}
-                  className="text-gray-400 hover:text-brand-400 transition-colors duration-200 text-sm"
+                  className="text-gray-400 hover:text-brand-400 transition-colors duration-200 text-sm flex items-center gap-2"
                 >
-                  Cloud Migration
+                  United Kingdom
+                  <img src={`${assetBase}assets/flags/uk.png`} alt="UK Flag" className="w-5 h-3.5 rounded-sm object-cover flex-shrink-0" />
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('services')}
-                  className="text-gray-400 hover:text-brand-400 transition-colors duration-200 text-sm"
+                  className="text-gray-400 hover:text-brand-400 transition-colors duration-200 text-sm flex items-center gap-2"
                 >
-                  DevOps Automation
+                  United States
+                  <img src={`${assetBase}assets/flags/us.png`} alt="US Flag" className="w-5 h-3.5 rounded-sm object-cover flex-shrink-0" />
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('services')}
-                  className="text-gray-400 hover:text-brand-400 transition-colors duration-200 text-sm"
+                  className="text-gray-400 hover:text-brand-400 transition-colors duration-200 text-sm flex items-center gap-2"
                 >
-                  Security Solutions
+                  India
+                  <img src={`${assetBase}assets/flags/india.png`} alt="India Flag" className="w-5 h-3.5 rounded-sm object-cover flex-shrink-0" />
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('services')}
-                  className="text-gray-400 hover:text-brand-400 transition-colors duration-200 text-sm"
+                  className="text-gray-400 hover:text-brand-400 transition-colors duration-200 text-sm flex items-center gap-2"
                 >
-                  Managed Services
+                  Singapore
+                  <img src={`${assetBase}assets/flags/singapore.png`} alt="Singapore Flag" className="w-5 h-3.5 rounded-sm object-cover flex-shrink-0" />
                 </button>
               </li>
             </ul>
@@ -165,36 +170,36 @@ const Footer = () => {
                 <svg className="w-5 h-5 text-brand-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:contact@cloudrack.com" className="text-gray-400 hover:text-brand-400 transition-colors duration-200 text-sm">
-                  contact@cloudrack.com
+                <a href="mailto:info@cloudrack.com" className="text-gray-400 hover:text-brand-400 transition-colors duration-200 text-sm">
+                  info@cloudrack.co.in
                 </a>
               </li>
-              <li className="flex items-start space-x-3">
+              {/* <li className="flex items-start space-x-3">
                 <svg className="w-5 h-5 text-brand-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 <a href="tel:+12345678900" className="text-gray-400 hover:text-brand-400 transition-colors duration-200 text-sm">
                   +1 234 567 8900
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0">
             <p className="text-gray-500 text-sm">
               &copy; {new Date().getFullYear()} CloudRack. All rights reserved.
             </p>
-            <div className="flex space-x-6">
-              <a href="#" className="text-gray-500 hover:text-brand-400 transition-colors duration-200 text-sm">
+            {/* <div className="flex space-x-6">
+              <button className="text-gray-500 hover:text-brand-400 transition-colors duration-200 text-sm">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-gray-500 hover:text-brand-400 transition-colors duration-200 text-sm">
+              </button>
+              <button className="text-gray-500 hover:text-brand-400 transition-colors duration-200 text-sm">
                 Terms of Service
-              </a>
-            </div>
+              </button>
+            </div> */}
           </div>
         </div>
       </div>

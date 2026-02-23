@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 const Projects = () => {
@@ -92,7 +91,7 @@ const Projects = () => {
             Success Stories
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Featured <span className="gradient-text">Projects</span>
+            Case <span className="gradient-text">Studies</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Transforming businesses across industries with innovative cloud solutions.

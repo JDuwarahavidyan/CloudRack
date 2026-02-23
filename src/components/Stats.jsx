@@ -1,12 +1,14 @@
 import { motion, useInView, useMotionValue, useSpring, useTransform, animate } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
-const AnimatedCounter = ({ value, suffix = '' }) => {
+const AnimatedCounter = ({ value, suffix = '', decimals = 0 }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const motionValue = useMotionValue(0)
   const springValue = useSpring(motionValue, { duration: 3000 })
-  const displayValue = useTransform(springValue, (latest) => Math.round(latest))
+  const displayValue = useTransform(springValue, (latest) =>
+    decimals > 0 ? latest.toFixed(decimals) : Math.round(latest)
+  )
 
   useEffect(() => {
     if (isInView) {
@@ -28,7 +30,7 @@ const Stats = () => {
 
   const stats = [
     {
-      value: 120,
+      value: 70,
       suffix: '+',
       label: 'Projects Completed',
       icon: (
@@ -38,7 +40,7 @@ const Stats = () => {
       )
     },
     {
-      value: 80,
+      value: 100,
       suffix: '+',
       label: 'Enterprise Clients',
       icon: (
@@ -60,6 +62,7 @@ const Stats = () => {
     {
       value: 99.99,
       suffix: '%',
+      decimals: 2,
       label: 'SLA Uptime',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,7 +138,7 @@ const Stats = () => {
                 </div>
               </div>
               <div className="text-5xl font-bold mb-3 gradient-text">
-                <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+                <AnimatedCounter value={stat.value} suffix={stat.suffix} decimals={stat.decimals} />
               </div>
               <div className="text-gray-400 font-medium">
                 {stat.label}
